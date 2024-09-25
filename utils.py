@@ -21,7 +21,7 @@ def generate_script(subject, video_length, creativity, api_key):
         ]
     )
 
-    model = ChatOpenAI(model = "moonshot-v1-8k", openai_api_key=api_key, base_url = "https://api.moonshot.cn/v1", temperature=creativity)
+    model = ChatOpenAI(model = "moonshot-v1-8k", openai_api_key=api_key, base_url = "", temperature=creativity)
 
     title_chain = title_template | model
     script_chain = script_template | model
